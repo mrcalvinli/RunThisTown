@@ -11,3 +11,7 @@
 // about supported directives.
 //
 //= require_self
+
+function showThis() {
+	console.log("hihi");
+}
