@@ -14,4 +14,5 @@
 
 function showThis() {
 	console.log("hihi");
+	console.log("more hi");
 }
