@@ -13,5 +13,5 @@
 //= require_self
 //= require jquery_v2.min
 //= require jquery-ui.min
-//= require bootstrap
+//= require bootstrap-sprockets
 //= require navbar
