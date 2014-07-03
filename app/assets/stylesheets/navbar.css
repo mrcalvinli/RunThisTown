@@ -1,11 +1,21 @@
 .modal { font-size: 14pt; }
 .modal h4{ font-size: 18pt; }
 
-.navbar { font-family: 'Sanchez', serif; }
+.navbar { 
+    font-family: 'Sanchez', serif;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5); 
+    height: 60px;
+}
 .navbar-nav li {
     margin-top: 10px;
     font-size: 14pt;
     font-weight: bolder;
+}
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: 0; 
+    right: 0; 
+    top: 0; 
 }
 
 #extraInfo {
