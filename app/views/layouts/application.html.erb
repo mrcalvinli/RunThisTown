@@ -9,6 +9,15 @@
   <%= javascript_include_tag params[:controller] %>
 
   <%= csrf_meta_tags %>
+
+  <!-- Common js components -->
+  <script type="text/javascript">
+    console.log("Initizlizing common components");
+    var navbarCtrl = new NavBarController();
+    $(document).ready(function() {
+      navbarCtrl.init();
+    });
+  </script>
 </head>
 <body>
 	<div id="naviBar"><%= render 'partials/navbar' %> </div>
