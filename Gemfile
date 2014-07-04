@@ -14,6 +14,9 @@ group :production do
 	gem 'rails_12factor', '0.0.2'
 end
 
+# Add devise for making awesome users!
+gem 'devise'
+
 # Use lovely bootstrap 3
 gem 'bootstrap-sass', '~> 3.2.0'
 
