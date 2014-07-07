@@ -15,16 +15,14 @@
 var LandingPageController = function() {
 
   /* Private variables */
-  var private = (function() {
-    return {
-      jumbotron: $(".jumbotron"),
-      infoSection1: $("#infoSection1"),
-      infoSection2: $("#infoSection2"),
-      infoSection3: $("#infoSection3"),
-      sectionNav: $("#navigator")
-    }
-  })();
-
+  var private = {}
+  var setPrivateVars = function() {
+    private.jumbotron = $(".jumbotron");
+    private.infoSection1 = $("#infoSection1");
+    private.infoSection2 = $("#infoSection2");
+    private.infoSection3 = $("#infoSection3");
+    private.sectionNav = $("#navigator")
+  }
   /* Helper functions */
   var helpers = (function() {
 
@@ -38,7 +36,12 @@ var LandingPageController = function() {
       private.infoSection1.height(mainHeight);
       private.infoSection2.height(mainHeight);
       private.infoSection3.height(mainHeight);
-      private.sectionNav.css("margin-top", (mainHeight/2) - private.sectionNav.height()/2 + 60 - 20);
+      private.sectionNav.css("margin-top", (mainHeight/2) - private.sectionNav.height()/2 + 60 - 20)
+                        .css("height", private.sectionNav.height())
+                        .css("top", "-9999px")
+                        .css("bottom", "-9999px")
+                        .css("margin-top", "auto")
+                        .css("margin-bottom", "auto");
       // $("#infoSection1 p").css("font-size", Math.ceil(mainHeight * $(window).width() / 40000));
       // $("#infoSection2 p").css("font-size", Math.ceil(mainHeight * $(window).width() / 40000));
       // $("#infoSection3 h2").css("font-size",  Math.ceil(mainHeight * $(window).width() / 40000));
@@ -67,22 +70,24 @@ var LandingPageController = function() {
     }
 
     function animateSectionScroll(section) {
-      var container = $("body"), scrollTo;
+      var container = $("body"), scrollTo, scrollToVal;
       $(".navBullet").css("opacity", 0.5);
       if (section == 0) {
-        scrollTo = 60;
+        scrollToVal = 60;
         $("#homeBullet").css("opacity", 1);
       } else {
         $("#navBullet" + section).css("opacity", 1);
+        if (section == 1) {
+          scrollTo = private.infoSection1;
+        } else if (section == 2) {
+          scrollTo = private.infoSection2;
+        } else if (section == 3) {
+          scrollTo = private.infoSection3;
+        }
+        scrollToVal = scrollTo.offset().top;
       } 
-      if (section == 1) {
-        scrollTo = private.infoSection1;
-      } else if (section == 2) {
-        scrollTo = private.infoSection2;
-      } else if (section == 3) {
-        scrollTo = private.infoSection3;
-      }
-      container.animate({scrollTop: scrollTo - 60}, 1500, "easeInOutQuint");
+
+      container.animate({scrollTop: scrollToVal - 60}, 1500, "easeInOutQuint");
     }
 
     return {
@@ -96,6 +101,7 @@ var LandingPageController = function() {
   /* LandingPageController initializer */
   function init() {
     console.log("LandingPageController initialized");
+    setPrivateVars();
     eventHandlers();
     helpers.sizingJS();
     $(window).resize(function() {
@@ -119,16 +125,16 @@ var LandingPageController = function() {
       }
     }, ".navBullet");
     private.sectionNav.on({
-      click: helpers.animateSectionScroll(0)
+      click: function() {helpers.animateSectionScroll(0)}
     }, "#homeBullet");
     private.sectionNav.on({
-      click: helpers.animateSectionScroll(1)
+      click: function() { helpers.animateSectionScroll(1) }
     }, "#navBullet1");
     private.sectionNav.on({
-      click: helpers.animateSectionScroll(2)
+      click: function() { helpers.animateSectionScroll(2) }
     }, "#navBullet2");
     private.sectionNav.on({
-      click: helpers.animateSectionScroll(3)
+      click: function() { helpers.animateSectionScroll(3) }
     }, "#navBullet3");
 
     // Chevron Scroll Events //
