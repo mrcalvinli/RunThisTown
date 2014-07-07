@@ -1,5 +1,14 @@
 RunThisTown::Application.routes.draw do
+  # Root page - Landing
   root "landing#home"
+
+  # User routes
+  devise_for :users
+
+  #RunRoute routes
+  get "run_route/new"
+  get "run_route/show"
+  get "run_route/edit"
 
   
   # The priority is based upon order of creation: first created -> highest priority.
