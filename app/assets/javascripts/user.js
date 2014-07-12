@@ -1,3 +1,5 @@
+//= require_self
+
 // TODO: Find a place for everything in the function
 function appendedElements() {
   $(".confirmRouteLink").append($('<span id = "profSuccessRoute" style = "color: #2eba3e; font-size: 20px; opacity: 0.5" class = "glyphicon glyphicon-ok profConfirmRoute"></span>'));
