@@ -59,9 +59,12 @@ RunThisTown::Application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  config.assets.precompile += [ 'landing.css' , 'landing.js',
-                                'user.css', 'user.js' ,
-                                'run_route.css', 'run_route.js' ]
+  config.assets.precompile += [ 'landing.css',       'landing.js',
+                                'user.css',          'user.js' ,
+                                'run_route.css',     'run_route.js', 
+                                'sessions.css',      'sessions.js',
+                                'registrations.css', 'registrations.js',
+                                'passwords.css',     'passwords.js' ]
 
   # Set email delivery url
   config.action_mailer.default_url_options = { host: 'http://stormy-shelf-8712.herokuapp.com/' }
