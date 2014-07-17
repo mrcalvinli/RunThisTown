@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20140712220452) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "birthday"
+    t.date     "birthday"
     t.float    "weight"
   end
 
