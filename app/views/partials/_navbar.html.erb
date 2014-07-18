@@ -25,9 +25,9 @@
   		<button id = "navSearchBtn" type="submit" class="btn btn-warning" style = "margin-top: 10px; margin-left:3px;">Search</button>
 		</div>
 		<ul class = "nav navbar-nav navbar-right">
-      <!-- <%# if user_signed_in? then %>
+      <% if user_signed_in? then %>
 
-        <li><%# link_to current_user.first_name, homepage_path %></li>
+        <li><%= link_to current_user.first_name, user_show_path %></li>
         <li>
           <div class = "dropdown">
             <span id = "extraInfo" class = "glyphicon glyphicon-cog" data-toggle="dropdown"></span>
@@ -36,14 +36,14 @@
               <li role="presentation" class="divider"></li>
               <li role="presentation"><a role="menuitem" tabindex="-1" style = "cursor: pointer;" ><%# link_to 'My Profile', root_path %></a></li>
               <li role="presentation"><a role="menuitem" tabindex="-1" style = "cursor: pointer;" ><%# link_to 'Account Settings', edit_user_registration_path %></a></li>
-              <li id = "signOut" role="presentation"><a role="menuitem" tabindex="-1" style = "cursor: pointer;" ><%# link_to 'Sign Out', destroy_user_session_path %></a></li>
+              <li id = "signOut" role="presentation"><a role="menuitem" tabindex="-1" style = "cursor: pointer;" ><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></a></li>
               <li role="presentation" class="divider"></li>
               <li role="presentation"><a id = "creditsBtn" role="menuitem" tabindex="-1" style = "cursor: pointer;"  data-toggle="modal" data-target="#creditsModal">Credits</a></li>
             </ul>
           </div>
         </li>
 
-      <%# else %> -->
+      <% else %>
         <li><a data-toggle="modal" data-target="#loginModal" style = "cursor: pointer">Log In</a></li>
         <li>
           <div class = "dropdown">
@@ -55,7 +55,7 @@
             </ul>
           </div>
         </li>
-    <%# end %>
+    <% end %>
 		</ul>
 	</div>
 </nav>
