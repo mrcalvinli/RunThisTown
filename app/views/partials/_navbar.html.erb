@@ -83,31 +83,36 @@
   </div>
 </div>
 
+<!-- LOGIN MODAL -->
 <div class="modal fade" id = "loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style = "font-family: Sanchez Regular, serif; ">
   <div class="modal-dialog modal-dialog-center" style = "width: 700px;">
     <div class="modal-content" style = "background-color: beige">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" style = "font-family: Sanchez Regular, serif">Log In</h4>
-      </div>
-      <div class="modal-body" style = "text-align: center">
-
-        <div style = 'display: inline-block; text-align: left; min-width: 450px;'>
-            <%#= form_for(:user, :url => session_path(:user)) do |f| %>
-
-            <div><%#= f.label :email, :style => "font-weight: normal" %>
-            <%#= f.email_field :email, :autofocus => true, :autofocus => true , :class => "userInput" %></div>
-            <br>
-
-            <div><%#= f.label :password, :style => "font-weight: normal" %>
-            <%#= f.password_field :password , :class => "userInput" %></div>
+      <%= form_for(:user, :url => session_path(:user)) do |f| %>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" style = "font-family: Sanchez Regular, serif">Log In</h4>
         </div>
-      </div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-        <button type="button" class="btn btn-warning"><%#= f.submit :style => "background-color: transparent; border:none; color: white", :value => "Log in" %></button>
-        <%# end %>
-      </div>
+        <div class="modal-body" style = "text-align: center">
+          <div style = 'display: inline-block; text-align: left; min-width: 450px;'>
+            <div>
+              <%= f.label :email, :style => "font-weight: normal" %>
+              <%= f.email_field :email, :autofocus => true , :class => "userInput" %>
+            </div>
+            <br>
+            <div>
+              <%= f.label :password, :style => "font-weight: normal" %>
+              <%= f.password_field :password , :class => "userInput" %>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-warning">
+            <%= f.submit :style => "background-color: transparent; border:none; color: white", :value => "Log in" %>
+          </button>
+        </div>
+      <% end %>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<!-- END LOGIN MODAL -->
