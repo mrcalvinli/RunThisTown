@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
 
-  background: rgba(255, 255, 255, 0.5) url("RunningBg1.png") no-repeat center center fixed;
+  background: rgba(255, 255, 255, 0.5) image-url("RunningBg1.png") no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 #infoSection1 {
   background-color: white;
-  background: rgba(255, 255, 255, 0.5) url("MapBg2.png") no-repeat center center fixed;
+  background: rgba(255, 255, 255, 0.5) image-url("MapBg2.png") no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -244,7 +244,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 #infoSection2 {
   background-color: beige;
-  background: rgba(255, 255, 255, 0.5) url("Section2Bg1.jpg") no-repeat center center fixed;
+  background: rgba(255, 255, 255, 0.5) image-url("Section2Bg1.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -255,7 +255,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 #infoSection3 {
   background-color: beige;
-  background: rgba(255, 255, 255, 0.5) url("Section3Bg2.png") no-repeat center center fixed;
+  background: rgba(255, 255, 255, 0.5) image-url("Section3Bg2.png") no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
