@@ -1,25 +1,37 @@
-<%= form_for(:user, :url => registration_path(:user)) do |f| %>
-  
-  <!-- TODO: DEAL WITH DEVISE ERROR MESSAGES -->
-  <%#= devise_error_messages! %>
-
-  <div><%= f.label :first_name %><br />
-  <%= f.text_field :first_name, autofocus: true %></div>
-
-    <div><%= f.label :last_name %><br />
-  <%= f.text_field :email %></div>  
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-    <div><%= f.label :birthday %><br />
-  <%= f.date_select :birthday %></div>
-
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
-  <div><%= f.submit "Sign up" %></div>
+<%= form_for(:user, :url => registration_path(:user)) do |f| %> 
+  <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title" style = "font-family: Sanchez, serif">Sign up here!</h4>
+  </div>
+  <div class="modal-body">
+    <div>
+      <%= f.label :first_name %><br/>
+      <%= f.text_field :first_name %>
+    </div>
+    <div>
+      <%= f.label :last_name %><br/>
+      <%= f.text_field :email %>
+    </div>  
+    <div>
+      <%= f.label :email %><br/>
+      <%= f.email_field :email %>
+    </div>
+    <div>
+      <%# Date options are in the landing_helper module %>
+      <%= f.label :birthday %><br/>
+      <%= f.date_select :birthday, date_options %>
+    </div>
+    <div>
+      <%= f.label :password %><br/>
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+    <div>
+      <%= f.label :password_confirmation %><br/>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-warning"><%= f.submit :style => "background-color: transparent; border:none; color: white", :value => "Create Account" %>
+    </button>
+  </div>
 <% end %>
