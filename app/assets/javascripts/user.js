@@ -7,7 +7,7 @@ function appendedElements() {
   $(".removeRouteLink").append($('<span id = "profRemoveRoute" style = "color: #e6463d; font-size: 20px; opacity: 0.5" class = "glyphicon glyphicon-arrow-up profRemoveRoute"></span>'));
 
   if ($("#routesRunContainer").children().length == 0) {
-    $("#routesRunContainer").append($("<div style = 'font-size: 14pt; height: 100%; text-align: center; '>You have not run a route yet.  Click the check mark on any routes above that you've completed</div>"));
+    $("#routesRunContainer").append($("<div style = 'font-size: 14pt; height: 100%; text-align: center; '>You have not ran a route yet.  Click the check mark on any routes above that you've completed</div>"));
   }
 
   if ($("#routesToRunContainer").children().length == 0) {
