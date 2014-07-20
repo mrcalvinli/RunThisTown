@@ -34,9 +34,9 @@
             <ul class="dropdown-menu pull-right" role="menu" style = "margin-right: 10px;">
               <li role="presentation"><a id = "navHelpItem" role="menuitem" tabindex="-1" style = "cursor: pointer; display: none; " data-toggle="modal" data-target=".helpModal">Help</a></li>
               <li role="presentation" class="divider"></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" style = "cursor: pointer;" ><%# link_to 'My Profile', root_path %></a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" style = "cursor: pointer;" ><%# link_to 'Account Settings', edit_user_registration_path %></a></li>
-              <li id = "signOut" role="presentation"><a role="menuitem" tabindex="-1" style = "cursor: pointer;" ><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></a></li>
+              <li role="presentation"><%= link_to 'My Profile', user_show_path %></li>
+              <li role="presentation"><%= link_to 'Account Settings', edit_user_registration_path %></li>
+              <li id = "signOut" role="presentation"><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
               <li role="presentation" class="divider"></li>
               <li role="presentation"><a id = "creditsBtn" role="menuitem" tabindex="-1" style = "cursor: pointer;"  data-toggle="modal" data-target="#creditsModal">Credits</a></li>
             </ul>
