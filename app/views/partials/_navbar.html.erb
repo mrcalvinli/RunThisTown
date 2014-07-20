@@ -6,7 +6,7 @@
 			<span class = "icon-bar"></span>
 			<span class = "icon-bar"></span>
 		</button>
-		<div><%# link_to image_tag("RunThisTownLogo1.png", :style => "height: 48px; padding: 0; margin: 6px 20px 6px", :class => "navbar-brand"), root_path %></div>
+		<div><%= link_to image_tag("RunThisTownLogo1.png", :style => "height: 48px; padding: 0; margin: 6px 20px 6px", :class => "navbar-brand"), root_path %></div>
 	</div>
 	<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 		<div id = "searchContainer" class="navbar-form navbar-left" role="search">
@@ -25,25 +25,25 @@
   		<button id = "navSearchBtn" type="submit" class="btn btn-warning" style = "margin-top: 10px; margin-left:3px;">Search</button>
 		</div>
 		<ul class = "nav navbar-nav navbar-right">
-      <!-- <%# if user_signed_in? then %>
+      <% if user_signed_in? then %>
 
-        <li><%# link_to current_user.first_name, homepage_path %></li>
+        <li><%= link_to current_user.first_name, user_show_path %></li>
         <li>
           <div class = "dropdown">
             <span id = "extraInfo" class = "glyphicon glyphicon-cog" data-toggle="dropdown"></span>
             <ul class="dropdown-menu pull-right" role="menu" style = "margin-right: 10px;">
               <li role="presentation"><a id = "navHelpItem" role="menuitem" tabindex="-1" style = "cursor: pointer; display: none; " data-toggle="modal" data-target=".helpModal">Help</a></li>
               <li role="presentation" class="divider"></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" style = "cursor: pointer;" ><%# link_to 'My Profile', root_path %></a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" style = "cursor: pointer;" ><%# link_to 'Account Settings', edit_user_registration_path %></a></li>
-              <li id = "signOut" role="presentation"><a role="menuitem" tabindex="-1" style = "cursor: pointer;" ><%# link_to 'Sign Out', destroy_user_session_path %></a></li>
+              <li role="presentation"><%= link_to 'My Profile', user_show_path %></li>
+              <li role="presentation"><%= link_to 'Account Settings', edit_user_registration_path %></li>
+              <li id = "signOut" role="presentation"><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
               <li role="presentation" class="divider"></li>
               <li role="presentation"><a id = "creditsBtn" role="menuitem" tabindex="-1" style = "cursor: pointer;"  data-toggle="modal" data-target="#creditsModal">Credits</a></li>
             </ul>
           </div>
         </li>
 
-      <%# else %> -->
+      <% else %>
         <li><a data-toggle="modal" data-target="#loginModal" style = "cursor: pointer">Log In</a></li>
         <li>
           <div class = "dropdown">
@@ -55,7 +55,7 @@
             </ul>
           </div>
         </li>
-    <%# end %>
+    <% end %>
 		</ul>
 	</div>
 </nav>
@@ -83,31 +83,34 @@
   </div>
 </div>
 
+<!-- LOGIN MODAL -->
 <div class="modal fade" id = "loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style = "font-family: Sanchez Regular, serif; ">
   <div class="modal-dialog modal-dialog-center" style = "width: 700px;">
     <div class="modal-content" style = "background-color: beige">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" style = "font-family: Sanchez Regular, serif">Log In</h4>
-      </div>
-      <div class="modal-body" style = "text-align: center">
-
-        <div style = 'display: inline-block; text-align: left; min-width: 450px;'>
-            <%#= form_for(:user, :url => session_path(:user)) do |f| %>
-
-            <div><%#= f.label :email, :style => "font-weight: normal" %>
-            <%#= f.email_field :email, :autofocus => true, :autofocus => true , :class => "userInput" %></div>
-            <br>
-
-            <div><%#= f.label :password, :style => "font-weight: normal" %>
-            <%#= f.password_field :password , :class => "userInput" %></div>
+      <%= form_for(:user, :url => session_path(:user)) do |f| %>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" style = "font-family: Sanchez Regular, serif">Log In</h4>
         </div>
-      </div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-        <button type="button" class="btn btn-warning"><%#= f.submit :style => "background-color: transparent; border:none; color: white", :value => "Log in" %></button>
-        <%# end %>
-      </div>
+        <div class="modal-body" style = "text-align: center">
+          <div style = 'display: inline-block; text-align: left; min-width: 450px;'>
+            <div>
+              <%= f.label :email, :style => "font-weight: normal" %>
+              <%= f.email_field :email, :autofocus => true , :class => "userInput" %>
+            </div>
+            <br>
+            <div>
+              <%= f.label :password, :style => "font-weight: normal" %>
+              <%= f.password_field :password , :class => "userInput" %>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+          <%= f.button "Log in", :class=>"btn btn-warning" %>
+        </div>
+      <% end %>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<!-- END LOGIN MODAL -->

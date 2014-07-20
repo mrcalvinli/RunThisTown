@@ -42,7 +42,7 @@
           <%# end %>
         <% end %>
       </div>
-      <legend style = "border-color: grey; "><h1 id = "name" style = "text-align: center; margin-bottom: 15px; font-family: Sanchez"><%#= current_user.first_name + " " + current_user.last_name%>[Static Name]</h1></legend>
+      <legend style = "border-color: grey; "><h1 id = "name" style = "text-align: center; margin-bottom: 15px; font-family: Sanchez"><%= current_user.get_full_name %></h1></legend>
       
       <%#= link_to friendships_new_path do %>
         <button class = "btn btn-primary btn-block" style = "margin-bottom: 30px; ">My Friends</button>
@@ -93,7 +93,7 @@
             <%# end %>
           <%# end %>
         </div>
-        <legend style = "border-color: grey; position: relative; "><h2 style = "text-align: center; font-family: Sanchez">Routes that I've run</h2><a id = "toggleRouteVisualization" style = "float: right; cursor: pointer; position: absolute; top: 5px; right: 5px; ">Show Graph</a></legend>
+        <legend style = "border-color: grey; position: relative; "><h2 style = "text-align: center; font-family: Sanchez">Routes that I've ran</h2><a id = "toggleRouteVisualization" style = "float: right; cursor: pointer; position: absolute; top: 5px; right: 5px; ">Show Graph</a></legend>
         <div id = "routeVisualizationContainer"></div>
         <div id = "routesRunContainer">
           <%# current_user.run_routes.each do |route| %>

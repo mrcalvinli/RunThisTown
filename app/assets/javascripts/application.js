@@ -11,7 +11,8 @@
 // about supported directives.
 //
 //= require_self
-//= require jquery_v2.min
+//= require jquery
+//= require jquery_ujs
 //= require jquery-ui.min
 //= require bootstrap-sprockets
 //= require navbar

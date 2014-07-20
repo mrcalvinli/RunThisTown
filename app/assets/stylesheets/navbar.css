@@ -54,3 +54,31 @@
 
     display: inline-block;
 }
+
+#loginModal {
+  font-family: 'Sanchez', serif;
+}
+
+.userInput {
+  margin-left: 15px;
+  float: right;
+  left: 25%;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 0 11px 0 13px;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.userInput:hover,
+.userInput:focus {
+  box-shadow: 0 2px 6px rgba(251, 159, 31, 0.6);
+  border: 1px solid rgb(251, 159, 31);
+}
