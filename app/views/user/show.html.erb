@@ -42,7 +42,7 @@
           <%# end %>
         <% end %>
       </div>
-      <legend style = "border-color: grey; "><h1 id = "name" style = "text-align: center; margin-bottom: 15px; font-family: Sanchez"><%#= current_user.first_name + " " + current_user.last_name%>[Static Name]</h1></legend>
+      <legend style = "border-color: grey; "><h1 id = "name" style = "text-align: center; margin-bottom: 15px; font-family: Sanchez"><%= current_user.get_full_name %></h1></legend>
       
       <%#= link_to friendships_new_path do %>
         <button class = "btn btn-primary btn-block" style = "margin-bottom: 30px; ">My Friends</button>
