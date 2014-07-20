@@ -13,9 +13,9 @@ function appendedElements() {
   if ($("#routesToRunContainer").children().length == 0) {
     $("#routesToRunContainer").append($("<div style = 'font-size: 14pt; height: 100%; text-align: center; '>You have no pending routes.  Click the button above to create a new route!</div>"));
   }
-// Stat template
+  // Stat template
   $(".statContainer").append('<div class = "stat"><p class = "statVal">Stat goes here</p><span class = "glyphicon glyphicon-search"></span></div>');
-// Route template
+  // Route template
   $(".routesRunContainer").append(
       '<div class = "profRouteEntry well well-sm">'
       + '<div style = "display: inline-block; width: 49%; ">'

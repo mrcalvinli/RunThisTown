@@ -2,6 +2,18 @@
 <html>
 <head>
   <title>RunThisTown</title>
+
+  <!-- Google Maps -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUpd0JH2ETsua4nzZ4VHqwf1IrEJaGhiY&sensor=true&libraries=places"></script>
+  <script type="text/javascript" src="http://geoxml3.googlecode.com/svn/branches/polys/geoxml3.js"></script>
+
+  <!-- Le sexy icon -->
+  <%= favicon_link_tag "RunThisTownIcon.ico" %>
+
+  <!-- D3.js -->
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+
   <%= stylesheet_link_tag    "application" %>
   <%= stylesheet_link_tag    params[:controller] %>
 
@@ -12,7 +24,7 @@
 
   <!-- Common js components -->
   <script type="text/javascript">
-    console.log("Initizlizing common components");
+    console.log("Initializing common components");
     var navbarCtrl = new NavBarController();
     $(document).ready(function() {
       navbarCtrl.init();
