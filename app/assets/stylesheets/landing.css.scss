@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: transparent;
 }
 
-.navBullet {
+.nav_bullet {
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -73,39 +73,31 @@ h1, h2, h3, h4, h5, h6, p {
 .modal-dialog-center {
   margin-top: calc(25% - 227px);
 }
-#loginModal {
-  font-family: 'Sanchez', serif;
-}
 
 .modal { font-size: 14pt; }
 .modal h4{ font-size: 18pt; }
 
-.userInput {
-  margin-left: 15px;
-  float: right;
-  left: 25%;
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 0 11px 0 13px;
-  font-family: Roboto, sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-  text-overflow: ellipsis;
-  border: 1px solid transparent;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  height: 32px;
-  outline: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+#signUpModal {
+  font-family: Sanchez, serif;
 }
-.userInput:hover,
-.userInput:focus {
-  box-shadow: 0 2px 6px rgba(251, 159, 31, 0.6);
-  border: 1px solid rgb(251, 159, 31);
+#signUpModal .modal-dialog {
+  width: 700px;
+}
+#signUpModal .modal-content {
+  background-color: beige;
 }
 
-.masthead h1 { font-size: 100px; font-weight: bolder; line-height: 1;}
-.masthead p {font-size: 40px; font-weight: 200; line-height: 1.25; }
+.masthead h1 { 
+  font-size: 100px;
+  font-weight: bolder;
+  line-height: 1;
+  font-family: Sanchez, serif;
+}
+.masthead p {
+  font-size: 40px; 
+  font-weight: 200; 
+  line-height: 1.25; 
+}
 .masthead .btn {
   padding: 18px 48px;
   font-size: 40px;
@@ -132,6 +124,7 @@ h1, h2, h3, h4, h5, h6, p {
 
   margin-top: 50px;
 }
+
 #learnMoreDiv {
   position: absolute;
   bottom: 0;
@@ -158,6 +151,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+  box-sizing: content-box;
 
   background: rgba(255, 255, 255, 0.5) image-url("RunningBg1.png") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -207,7 +201,7 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
 }
 
-.navChevron {
+.nav_chevron {
   cursor: pointer;
   opacity: 0.5;
   display: block;
@@ -217,52 +211,100 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
 }
 
-.navChevron:hover {
+.nav_chevron:hover {
   opacity: 1;
 }
 
-.infoSection {
+.info_section {
   position: relative;
+  color: white;
+  font-family: 'Sanchez', serif;
+  font-weight: bolder;
+  background-color: beige;
 }
 
-.bottomNav {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;;
+.info_section .info_container {
+  padding: 20px;
+  height: inherit;
+}
+
+.info_section .info_container .info_title {
+  color: white;
+  font-family: Sanchez, serif;
+  font-size: 66pt;
+  font-weight: bolder;
+  margin-top: 0px;
+}
+
+.info_section .info_container .info_body {
+  font-size: 20pt;
+  font-weight: normal;
 }
 
 #infoSection1 {
-  background-color: white;
   background: rgba(255, 255, 255, 0.5) image-url("MapBg2.png") no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: white;
-  font-family: 'Sanchez', serif;
-  font-weight: bolder;
 }
 #infoSection2 {
-  background-color: beige;
   background: rgba(255, 255, 255, 0.5) image-url("Section2Bg1.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: white;
-  font-family: 'Sanchez', serif;
-  font-weight: bolder;
 }
+
+#infoSection2 .info_container .info_subtitle {
+  margin-left: 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#infoSection2 #meetPeopleIcon {
+  margin-top: 4%;
+}
+
+#infoSection2 #meetPeopleIcon .glyphicon-user {
+  margin-left: 15%;
+  font-size: 165px;
+}
+
+#infoSection2 #meetPeopleIcon .plus_span {
+  font-size: 145px;
+}
+
+#infoSection2 .info_container .container {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+#infoSection2 .info_container .container p {
+  font-weight: lighter;
+}
+
 #infoSection3 {
-  background-color: beige;
   background: rgba(255, 255, 255, 0.5) image-url("Section3Bg2.png") no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: white;
-  font-family: 'Sanchez', serif;
-  font-weight: bolder;
+}
+
+#infoSection3 .info_container .info_subtitle {
+  margin-left: 10%;
+}
+
+#infoSection3 .row {
+  padding: 20px 0px;
+}
+
+.bottom_nav {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;;
 }
 
 .btn:hover, .btn:focus {
@@ -275,4 +317,5 @@ h1, h2, h3, h4, h5, h6, p {
   max-height: -webkit-calc(100% - 240px);
   max-height: -o-calc(100% - 240px);
   max-height: calc(100% - 240px);
-}
+  width: 100%;
+} 

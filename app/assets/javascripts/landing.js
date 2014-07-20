@@ -71,7 +71,7 @@ var LandingPageController = function() {
 
     function animateSectionScroll(section) {
       var container = $("body"), scrollTo, scrollToVal;
-      $(".navBullet").css("opacity", 0.5);
+      $(".nav_bullet").css("opacity", 0.5);
       if (section == 0) {
         scrollToVal = 60;
         $("#homeBullet").css("opacity", 1);
@@ -123,7 +123,7 @@ var LandingPageController = function() {
       mouseleave: function() {
         $(this).css("opacity", 0.5);
       }
-    }, ".navBullet");
+    }, ".nav_bullet");
     private.sectionNav.on({
       click: function() {helpers.animateSectionScroll(0)}
     }, "#homeBullet");
