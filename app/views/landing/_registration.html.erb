@@ -1,34 +1,52 @@
 <%= form_for(:user, :url => registration_path(:user)) do |f| %> 
-  <div class="modal-header">
+  <div class="modal-header" style="text-align: center">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
       <h4 class="modal-title" style = "font-family: Sanchez, serif">Sign up here!</h4>
   </div>
   <div class="modal-body">
     <div>
-      <%= f.label :first_name %><br/>
-      <%= f.text_field :first_name %>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, :class => "userInput", :placeholder => "First" %>
     </div>
+
+    <br>
+
     <div>
-      <%= f.label :last_name %><br/>
-      <%= f.text_field :last_name %>
-    </div>  
-    <div>
-      <%= f.label :email %><br/>
-      <%= f.email_field :email %>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, :class => "userInput", :placeholder => "Last" %>
     </div>
+
+    <br>
+
+    <div>
+      <%= f.label :email %>
+      <%= f.email_field :email, :class => "userInput", :placeholder => "example@email.com" %>
+    </div>
+
+    <br>
+
     <div>
       <%# Date options are in the landing_helper module %>
-      <%= f.label :birthday %><br/>
-      <%= f.date_select :birthday, date_options %>
+      <%= f.label :birthday %>
+      <%= f.date_select :birthday, date_options, :class => "userInput" %>
     </div>
+
+    <br>
+
     <div>
-      <%= f.label :password %><br/>
-      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.label :password %>
+      <%= f.password_field :password, :class => "userInput", autocomplete: "off", :placeholder => "Password" %>
     </div>
+
+    <br>
+
     <div>
-      <%= f.label :password_confirmation %><br/>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, :class => "userInput", autocomplete: "off", :placeholder => "Confirm Password" %>
     </div>
+
+    <br>
+
   </div>
   <div class="modal-footer">
     <%= f.button "Create Account", :class => "btn btn-warning" %>
