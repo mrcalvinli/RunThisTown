@@ -25,7 +25,7 @@ function appendedElements() {
       + '<p>End: </p>'
       + '</div>'
       + '<div style = "display: inline-block; width: 49%; height: 100%; position: absolute; top: 0; ">'
-      + '<legend><h4 style = "text-align: center; font-family: Sanchez Regular">Waypoints Visited:</h4></legend>'
+      + '<legend><h4 style = "text-align: center;">Waypoints Visited:</h4></legend>'
       + '<div class = "wptsList">'
       + '<ol>'
       + '<li>Place</li>'

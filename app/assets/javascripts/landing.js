@@ -32,7 +32,7 @@ var LandingPageController = function() {
 
     function sizingJS() {
       var mainHeight = $(window).height() - 60;
-      private.jumbotron.css("height", mainHeight - 100);
+      private.jumbotron.css("height", mainHeight - 160);
       private.infoSection1.height(mainHeight);
       private.infoSection2.height(mainHeight);
       private.infoSection3.height(mainHeight);

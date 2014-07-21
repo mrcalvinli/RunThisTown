@@ -2,13 +2,10 @@
  *= require_self
  */
 
-/*@font-face { font-family: Sanchez Regular; src: url('fonts/Sanchezregular.otf'); } */
-
 html {
   background-color: antiquewhite;
 }
 body {
-  font-family: Sanchez Regular;
   background: transparent;  
 }
 

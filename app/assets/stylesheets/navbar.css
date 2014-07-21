@@ -2,8 +2,10 @@
 .modal h4{ font-size: 18pt; }
 
 .navbar { 
-    font-family: 'Sanchez', serif;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5); 
+    height: 60px;
+}
+.navbarUnderlay {
     height: 60px;
 }
 .navbar-nav li {
@@ -30,7 +32,7 @@
     opacity: 1;
 }
 .brand { float: left; margin-left: 20px; }
-.popover-title { font-family: 'Sanchez', serif; padding: 10px 30px; font-size: 14pt; }
+.popover-title { padding: 10px 30px; font-size: 14pt; }
 #routeFinderCont {
     width: -moz-calc(100% - 279px - 15px - 40px - 141px);
     width: -webkit-calc(100% - 279px - 15px - 40px - 141px);
@@ -56,29 +58,5 @@
 }
 
 #loginModal {
-  font-family: 'Sanchez', serif;
-}
 
-.userInput {
-  margin-left: 15px;
-  float: right;
-  left: 25%;
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 0 11px 0 13px;
-  font-family: Roboto, sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-  text-overflow: ellipsis;
-  border: 1px solid transparent;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  height: 32px;
-  outline: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-.userInput:hover,
-.userInput:focus {
-  box-shadow: 0 2px 6px rgba(251, 159, 31, 0.6);
-  border: 1px solid rgb(251, 159, 31);
 }
