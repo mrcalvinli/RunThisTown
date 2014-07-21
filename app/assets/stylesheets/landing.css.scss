@@ -12,33 +12,8 @@
 #locList .tooltip-inner {background-color: black; }
 #locList .tooltip-arrow {opacity: 1; }
 
-
-
-.yellow {
-  color: #ffffff;
-  background-color: #F69C1E;
-  *background-color: #F69C1E;
-  background-image: -moz-linear-gradient(top, #FEC12F, #F69C1E);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FEC12F), to(#F69C1E));
-  background-image: -webkit-linear-gradient(top, #FEC12F, #F69C1E);
-  background-image: -o-linear-gradient(top, #FEC12F, #F69C1E);
-  background-image: linear-gradient(to bottom, #FEC12F, #F69C1E);
-  background-repeat: repeat-x;
-  border-color: #F69C1E #F69C1E #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffFEC12F', endColorstr='#ffF69C1E', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-  border-top-color: #FEC12F;
-  border-bottom-color: #F69C1E;
-}
-
 body {
   background-color: transparent;
-  font-family: 'Sanchez', serif;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  font-family: Sanchez, serif;
 }
 
 #navigator {
@@ -78,7 +53,6 @@ h1, h2, h3, h4, h5, h6, p {
 .modal h4{ font-size: 18pt; }
 
 #signUpModal {
-  font-family: Sanchez, serif;
 }
 #signUpModal .modal-dialog {
   width: 700px;
@@ -91,7 +65,6 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 100px;
   font-weight: bolder;
   line-height: 1;
-  font-family: Sanchez, serif;
 }
 .masthead p {
   font-size: 40px; 
@@ -102,7 +75,6 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 18px 48px;
   font-size: 40px;
   font-weight: 200;
-  font-family: 'Sanchez', serif;
   color: #fff;
   border: 0;
   -webkit-border-radius: 6px;
@@ -218,7 +190,6 @@ h1, h2, h3, h4, h5, h6, p {
 .info_section {
   position: relative;
   color: white;
-  font-family: 'Sanchez', serif;
   font-weight: bolder;
   background-color: beige;
 }
@@ -230,7 +201,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 .info_section .info_container .info_title {
   color: white;
-  font-family: Sanchez, serif;
   font-size: 66pt;
   font-weight: bolder;
   margin-top: 0px;

@@ -2,13 +2,10 @@
  *= require_self
  */
 
-/*@font-face { font-family: Sanchez Regular; src: url('fonts/Sanchezregular.otf'); } */
-
 html {
   background-color: antiquewhite;
 }
 body {
-  font-family: Sanchez Regular;
   background: transparent;  
 }
 
@@ -18,7 +15,7 @@ legend {
 
 #profileContainer {
   background-color: rgba(204, 204, 204, 0.5);
-  margin-top: 90px;
+  margin-top: 20px;
 /*  position: fixed;
   left: 10px;
   right: 10px;*/

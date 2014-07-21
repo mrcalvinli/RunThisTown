@@ -1,0 +1,67 @@
+@font-face { font-family: Sanchez Regular; src: url('fonts/Sanchez_Regular.otf'); }
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Sanchez Regular', Sanchez, serif;
+  background-color: beige;
+}
+
+.yellow {
+  color: #ffffff;
+  background-color: #F69C1E;
+  *background-color: #F69C1E;
+  background-image: -moz-linear-gradient(top, #FEC12F, #F69C1E);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FEC12F), to(#F69C1E));
+  background-image: -webkit-linear-gradient(top, #FEC12F, #F69C1E);
+  background-image: -o-linear-gradient(top, #FEC12F, #F69C1E);
+  background-image: linear-gradient(to bottom, #FEC12F, #F69C1E);
+  background-repeat: repeat-x;
+  border-color: #F69C1E #F69C1E #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffFEC12F', endColorstr='#ffF69C1E', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  border-top-color: #FEC12F;
+  border-bottom-color: #F69C1E;
+}
+
+.modalInput {
+  float: right;
+}
+
+.registrationCont {
+  display: inline-block;
+  text-align: left;
+  min-width: 500px;
+  padding: 10px;
+}
+
+.registration {
+  text-align: center;
+}
+
+.rttInput {
+  margin-left: 15px;
+  left: 25%;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 0 11px 0 13px;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.rttInput:hover, 
+.rttInput:focus {
+  box-shadow: 0 2px 6px rgba(251, 159, 31, 0.6);
+  border: 1px solid rgb(251, 159, 31);
+}

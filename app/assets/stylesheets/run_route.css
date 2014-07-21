@@ -2,11 +2,6 @@
  *= require_self
  */
 
-/*@font-face { font-family: Sanchez Regular; src: url('fonts/Sanchezregular.otf'); } */
-body {
-  font-family: Sanchez Regular;
-}
-
 .yellow {
   color: #ffffff;
   background-color: #F69C1E;
@@ -42,7 +37,7 @@ body {
 }
 
 html { height: 100% }
-  body { height: 100%; margin: 0; padding: 0; font-family: Roboto, arial; }
+  body { height: 100%; margin: 0; padding: 0;}
     .controls {
       margin-top: 16px;
       border: 1px solid transparent;
@@ -173,7 +168,7 @@ html { height: 100% }
           float: left;
           text-align: center;
           font-size: 13pt;
-          font-family: Roboto, Sanchez, serif;
+          font-family: Roboto, "Sanchez Regular", serif;
         }
         .orgEntryLetter {
           background-color: #2BA63A;

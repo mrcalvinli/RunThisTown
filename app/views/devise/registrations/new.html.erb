@@ -1,27 +1,58 @@
-<h2>Sign up</h2>
+<div class="registration">  
+  <div class="registrationCont">
+    <h2 style="text-align: center;">Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
-  <div><%= f.label :first_name %><br />
-  <%= f.text_field :first_name, autofocus: true %></div>
+        <div>
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name, :class => "modalInput rttInput", :placeholder => "First" %>
+        </div>
 
-    <div><%= f.label :last_name %><br />
-  <%= f.text_field :email %></div>  
+        <br>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+        <div>
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name, :class => "modalInput rttInput", :placeholder => "Last" %>
+        </div>
 
-    <div><%= f.label :birthday %><br />
-  <%= f.date_select :birthday %></div>
+        <br>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+        <div>
+          <%= f.label :email %>
+          <%= f.email_field :email, :class => "modalInput rttInput", :placeholder => "example@email.com" %>
+        </div>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+        <br>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+        <div>
+          <%# Date options are in the landing_helper module %>
+          <%= f.label :birthday %>
+          <span class="modalInput">
+            <%= f.date_select :birthday, date_options, :class => "rttInput" %>
+          </span>
+        </div>
 
-<%= render "devise/shared/links" %>
+        <br>
+
+        <div>
+          <%= f.label :password %>
+          <%= f.password_field :password, :class => "modalInput rttInput", autocomplete: "off", :placeholder => "Password" %>
+        </div>
+
+        <br>
+
+        <div>
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, :class => "modalInput rttInput", autocomplete: "off", :placeholder => "Confirm Password" %>
+        </div>
+
+        <br>
+
+      <div><%= f.submit "Sign up", :class => "btn yellow" %></div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

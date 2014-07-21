@@ -5,12 +5,12 @@
       routePlannerController.init();
     });
   </script>
-  <div class="modal fade" id = "confirmationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style = "font-family: Sanchez, serif">
+  <div class="modal fade" id = "confirmationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-center">
       <div class="modal-content" style = "background-color: beige">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h3 class="modal-title" style = "font-family: Sanchez, serif">Confirm</h3>
+          <h3 class="modal-title">Confirm</h3>
         </div>
         <div class="modal-body">
           <input id = "routeNameInput" style = "border: 1px solid #ccc; margin-left: auto; margin-right: auto; display: block; padding: 5px; font-family: Roboto, Sanchez, serif; width: 400px; border-radius: 5px; font-weight: lighter" placeholder = "Input name of your route here"></input><br>
@@ -23,12 +23,12 @@
     </div>
   </div>
 
-  <div class="modal fade helpModal" id = "routePlannerHelpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style = "font-family: Sanchez, serif">
+  <div class="modal fade helpModal" id = "routePlannerHelpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-center">
       <div class="modal-content" style = "background-color: beige">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h3 class="modal-title" style = "font-family: Sanchez, serif">Using the Route Planner</h3>
+          <h3 class="modal-title">Using the Route Planner</h3>
         </div>
         <div class="modal-body">
           <p>The Route Planner helps you find out what route you want to take when you go on your run, based on the parts of the city that you want to pass by.</p>
@@ -66,15 +66,15 @@
   </span>
 
   <!-- Map -->
-  <div id="map" class = "mainElement" style = "margin-top: 60px"></div>
+  <div id="map" class = "mainElement"></div>
 
-  <div  class = "mainElement" id = "locList" style = "margin-top: 60px">
-    <h2 style = "text-align: center; font-family: Sanchez-Regular">Your route</h2>
+  <div  class = "mainElement" id = "locList">
+    <h2 style = "text-align: center;">Your route</h2>
     <div class="btnContainer">
       <div style = "height: 34px">
         <div class = "col-xs-6" style = "padding-left: 0; ">
           <div class="btn-group btn-block">
-            <button id = "orderBtnDropdown" class="btn btn-warning dropdown-toggle btn-block" data-toggle="dropdown" style = "outline: none; font-family: Sanchez, serif">
+            <button id = "orderBtnDropdown" class="btn btn-warning dropdown-toggle btn-block" data-toggle="dropdown" style = "outline: none; ">
               Order: Custom
               <span class="caret" style = "border-top: 4px solid white"></span>
             </button>
