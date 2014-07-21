@@ -29,19 +29,27 @@ var LandingPageController = function() {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Sizing Helpers
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    /**
+     * Called on page load and only happens once
+     */
+    function staticSizingJS() {
+      private.sectionNav.css("height", private.sectionNav.height())
+                        .css("top", "-9999px")
+                        .css("bottom", "-9999px")
+                        .css("margin-top", "auto")
+                        .css("margin-bottom", "auto");
+    }
 
+    /**
+     * Called on page load and within responsiveJS
+     */
     function sizingJS() {
       var mainHeight = $(window).height() - 60;
       private.jumbotron.css("height", mainHeight - 160);
       private.infoSection1.height(mainHeight);
       private.infoSection2.height(mainHeight);
       private.infoSection3.height(mainHeight);
-      private.sectionNav.css("margin-top", (mainHeight/2) - private.sectionNav.height()/2 + 60 - 20)
-                        .css("height", private.sectionNav.height())
-                        .css("top", "-9999px")
-                        .css("bottom", "-9999px")
-                        .css("margin-top", "auto")
-                        .css("margin-bottom", "auto");
       // $("#infoSection1 p").css("font-size", Math.ceil(mainHeight * $(window).width() / 40000));
       // $("#infoSection2 p").css("font-size", Math.ceil(mainHeight * $(window).width() / 40000));
       // $("#infoSection3 h2").css("font-size",  Math.ceil(mainHeight * $(window).width() / 40000));
@@ -50,6 +58,9 @@ var LandingPageController = function() {
       // $("#landingSection3Icon3").css("font-size", (mainHeight - 440)/3);
     }
 
+    /**
+     * Called on window resize
+     */
     function responsiveJS() {
       sizingJS()
       if ( $(window).width() < 1440 ){
@@ -91,6 +102,7 @@ var LandingPageController = function() {
     }
 
     return {
+      staticSizingJS: staticSizingJS,
       sizingJS: sizingJS,
       responsiveJS: responsiveJS,
       animateChevron: animateChevron, 
@@ -103,6 +115,7 @@ var LandingPageController = function() {
     console.log("LandingPageController initialized");
     setPrivateVars();
     eventHandlers();
+    helpers.staticSizingJS();
     helpers.sizingJS();
     $(window).resize(function() {
       helpers.responsiveJS();
