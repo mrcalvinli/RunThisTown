@@ -130,6 +130,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 1.2)
   jquery-rails
+  json
   pg (~> 0.13.2)
   rails (= 4.0.2)
   rails_12factor (= 0.0.2)

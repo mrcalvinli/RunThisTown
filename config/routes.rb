@@ -9,7 +9,7 @@ RunThisTown::Application.routes.draw do
 
   #RunRoute routes
   get "run_route/new"
-  get "run_route/create"
+  post "run_route/create"
   get "run_route/show"
   get "run_route/edit"
 
