@@ -85,12 +85,10 @@
         <legend style = "border-color: grey; "><h2 style = "text-align: center; font-family: Sanchez">Routes to run</h2></legend>
         <div id = "routesToRunContainer">
           <%= link_to "Create a new route", { controller: "run_route", action: "new"}, {class: "btn btn-success btn-lg btn-block", style: "font-size: 18pt; margin-bottom: 10px; text-decoration: none;", :method => :get} %>
-          <%# current_user.run_routes.each do |route| %>
-            <%# if !route.has_ran %>
-              <%# @run_route = route %>
-              <%#= render 'run_routes/run_route', :object => @run_route %>
-            <%# end %>
-          <%# end %>
+          <% current_user.run_routes.each do |route| %>
+            <% @run_route = route %>
+            <%= render 'run_route/run_route', :object => @run_route %>
+          <% end %>
         </div>
         <legend style = "border-color: grey; position: relative; "><h2 style = "text-align: center; font-family: Sanchez">Routes that I've ran</h2><a id = "toggleRouteVisualization" style = "float: right; cursor: pointer; position: absolute; top: 5px; right: 5px; ">Show Graph</a></legend>
         <div id = "routeVisualizationContainer"></div>
