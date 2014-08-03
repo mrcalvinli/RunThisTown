@@ -163,11 +163,20 @@ function RoutePlannerController() {
       });
     }
 
+    function addHiddenInput(form, key, value) {
+      var input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = value;
+      form.appendChild(input);
+    }
+
     return {
       mapInitialize: mapInitialize,
       createUrlAddress: createUrlAddress,
       computeTotalDistance: computeTotalDistance, 
-      orderEntries: orderEntries
+      orderEntries: orderEntries,
+      addHiddenInput: addHiddenInput
     }
   })();
 
@@ -433,33 +442,28 @@ function RoutePlannerController() {
     });
 
     $("#confirmRouteBtn").on("click", function() {
-      // insert backend stuff here
-      // send route data to server
-      // go to profile page and highlight their new route
-
-      //DO CHECKING FOR REPEATED SENDS AND PREVENT BAD BAD INFO SENDING
       var routeName = $("#routeNameInput").val();
-      $.ajax({
-        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
-        url: '/routeplanner_post',
-        type: 'POST',
-        data: {
-          "name": routeName,
-          "locations": private.routeInfoArray,
-          "distance": private.distanceString
-        },
-        dataType: "json",
-        success: function(data, textStatus){
-          if (data.redirect) {
-            window.location.href = data.redirect;
-          } else {
-            console.log("redirect failed");
-          }
-        },
-        error: function(){
-          console.log("error in json request");
+      if (routeName !== null && routeName.trim() !== "") {
+        //Get create RunRoute form
+        var runRouteForm = document.forms['runroute_form'];
+
+        helpers.addHiddenInput(runRouteForm, "name", $("#routeNameInput").val());
+        helpers.addHiddenInput(runRouteForm, "distance", private.distanceString);
+        for (var i = 0; i < private.routeInfoArray.length; i++) {
+          var locationInfo = private.routeInfoArray[i];
+          var locationJson = {
+            "address": locationInfo[0],
+            "latitude": locationInfo[1],
+            "longitude": locationInfo[2]
+          };
+
+          helpers.addHiddenInput(runRouteForm, "locations[]", JSON.stringify(locationJson));
         }
-      });
+
+        runRouteForm.submit();
+      } else {
+        console.log("insert name!");
+      }
     });
 
     /////////////////////////////////////////////////////////////////

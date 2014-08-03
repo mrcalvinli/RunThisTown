@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140712220452) do
+ActiveRecord::Schema.define(version: 20140722030324) do
 
   create_table "run_routes", force: true do |t|
     t.integer  "user_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140712220452) do
     t.text     "locations"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "distance"
   end
 
   create_table "users", force: true do |t|
