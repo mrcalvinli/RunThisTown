@@ -84,14 +84,11 @@
       <div class = "routeContainer well" style = "margin-bottom: 0; ">
         <legend style = "border-color: grey; "><h2 style = "text-align: center;">Routes to run</h2></legend>
         <div id = "routesToRunContainer">
-          <%#= button_to "Create a new route", { controller: "route_planner", action: "new"}, {type: "button", id: "userDelFriendBtn", class: "btn btn-success btn-lg btn-block", style: "font-size: 18pt; margin-bottom: 10px; text-decoration: none;", :method => :get} %>
-          <button type="button" class="btn btn-success btn-lg btn-block" style = "font-size: 18pt; margin-bottom: 10px;"><%#= link_to 'Create a new route', routeplanner_path, :style => "color: white; text-decoration: none;" %>[Create a new route]</button>
-          <%# current_user.run_routes.each do |route| %>
-            <%# if !route.has_ran %>
-              <%# @run_route = route %>
-              <%#= render 'run_routes/run_route', :object => @run_route %>
-            <%# end %>
-          <%# end %>
+          <%= link_to "Create a new route", { controller: "run_route", action: "new"}, {class: "btn btn-success btn-lg btn-block", style: "font-size: 18pt; margin-bottom: 10px; text-decoration: none;", :method => :get} %>
+          <% current_user.run_routes.each do |route| %>
+            <% @run_route = route %>
+            <%= render 'run_route/run_route', :object => @run_route %>
+          <% end %>
         </div>
         <legend style = "border-color: grey; position: relative; "><h2 style = "text-align: center;">Routes that I've ran</h2><a id = "toggleRouteVisualization" style = "float: right; cursor: pointer; position: absolute; top: 5px; right: 5px; ">Show Graph</a></legend>
         <div id = "routeVisualizationContainer"></div>
