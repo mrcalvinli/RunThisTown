@@ -433,10 +433,6 @@ function RoutePlannerController() {
     });
 
     $("#confirmRouteBtn").on("click", function() {
-      // insert backend stuff here
-      // send route data to server
-      // go to profile page and highlight their new route
-
       //DO CHECKING FOR REPEATED SENDS AND PREVENT BAD BAD INFO SENDING
       var routeName = $("#routeNameInput").val();
       $.ajax({
@@ -536,6 +532,7 @@ function RoutePlannerController() {
 
     /* Google Maps Map click listener */
     google.maps.event.addListener(private.map, 'click', function(e) {
+      
       addLocation(e.latLng);
     });
 
